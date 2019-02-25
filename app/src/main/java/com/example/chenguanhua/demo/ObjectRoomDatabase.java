@@ -9,7 +9,7 @@ import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
-@Database(entities = {Object.class}, version = 6, exportSchema = false)
+@Database(entities = {Object.class}, version = 7, exportSchema = false)
 public abstract class ObjectRoomDatabase extends RoomDatabase {
 
     public abstract ObjectDao objectDao();
@@ -56,15 +56,7 @@ public abstract class ObjectRoomDatabase extends RoomDatabase {
             // Not needed if you only populate the database
             // when it is first created
             mDao.deleteAll();
-            Object o = new Object("Code","Name","Line");
-            Object b = new Object("Code1","Name1","Line1");
 
-            mDao.insert(o);
-            Log.d("WEIRD", "name = " + o.getCode());
-            Log.d("WEIRD", "name = " + o.getName());
-            Log.d("WEIRD", "line = " + o.getLine());
-
-            mDao.insert(b);
             return null;
         }
     }

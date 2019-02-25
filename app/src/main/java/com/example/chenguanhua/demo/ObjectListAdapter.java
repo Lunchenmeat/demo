@@ -28,8 +28,6 @@ public class ObjectListAdapter extends RecyclerView.Adapter<ObjectListAdapter.Ob
         if (mObjects != null) {
             Object current = mObjects.get(position);
             holder.objectCodeView.setText(current.getCode());
-            Log.d("WEIRD", "What is the name " + current.getName());
-
             holder.objectNameView.setText(current.getName());
             holder.objectLineView.setText(current.getLine());
         } else {

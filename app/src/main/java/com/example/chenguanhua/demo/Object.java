@@ -11,18 +11,22 @@ public class Object {
     @PrimaryKey(autoGenerate = true)
     private int id;
 
+    @ColumnInfo(name = "code")
     private String code;
 
+    @ColumnInfo(name = "name")
     private String name;
 
+    @ColumnInfo(name = "line")
     private String line;
 
-    public Object(String code, String name, String line)
-    {
+    public Object(String code, String name, String line) {
         this.code = code;
         this.name = name;
-        this.name = line;
+        this.line = line;
     }
+
+
     public int getId()
     {
         return id;
